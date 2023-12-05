@@ -6,9 +6,13 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
+import Checkbox from "expo-checkbox";
+import { useNavigation } from "@react-navigation/native";
 
 const SignupScreen = () => {
+  const [isChecked, setChecked] = useState(false);
+  const navigation = useNavigation();
   return (
     <ImageBackground
       source={require("../assets/nativebackground.jpg")}
@@ -35,12 +39,22 @@ const SignupScreen = () => {
           placeholder="C o n f i r m P a s s w o r d"
           style={styles.input}
         />
-
+        <View style={{ flexDirection: "row", marginTop: 10 }}>
+          <Checkbox
+            style={styles.checkbox}
+            value={isChecked}
+            onValueChange={setChecked}
+          />
+          <Text style={{ fontWeight: "400", marginTop: 10 }}>
+            Agree to our Terms and Conditions
+          </Text>
+        </View>
         <TouchableOpacity
           style={styles.opacity}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Login");
           }}
+          disabled={!isChecked}
         >
           <Text
             style={{
@@ -110,5 +124,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 10,
     marginTop: 20,
+  },
+  checkbox: {
+    margin: 8,
   },
 });
