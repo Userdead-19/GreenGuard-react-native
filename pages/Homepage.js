@@ -12,9 +12,17 @@ import { Ionicons } from "@expo/vector-icons";
 import UserProfile from "./slides/UserProfile";
 import Issues from "./slides/Issues";
 import Addissues from "./slides/Addissues";
+import { NavigationContainer } from "@react-navigation/native";
 import { colors } from "react-native-elements";
 
 const Homepage = () => {
+  const [shownavigator, setShownavigator] = React.useState(true);
+
+  function Scrolldetected() {
+    setShownavigator(false);
+  }
+  console.log(typeof Scrolldetected);
+
   const Customtabbar = ({ children, onPress }) => (
     <TouchableOpacity
       style={{
@@ -37,13 +45,14 @@ const Homepage = () => {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 25,
+          bottom: 10,
           left: 20,
           right: 20,
           elevation: 0,
           backgroundColor: "#ffffff",
           borderRadius: 15,
           height: 90,
+
           ...styles.shadow,
         },
       }}
