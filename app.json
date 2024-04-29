@@ -37,7 +37,9 @@
       "typedRoutes": true
     },
     "extra": {
-      "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_ZWxlY3RyaWMtc2hyaW1wLTEzLmNsZXJrLmFjY291bnRzLmRldiQ"
+      "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_ZWxlY3RyaWMtc2hyaW1wLTEzLmNsZXJrLmFjY291bnRzLmRldiQ",
+      "BACKEND_URL":"https://greenguard.onrender.com"
     }
   }
 }
+  
