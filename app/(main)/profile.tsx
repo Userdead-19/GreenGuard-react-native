@@ -1,13 +1,13 @@
 import { ImageBackground, StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
-import ProgressBar from "@/Components/Progressbar";
+import ProgressBar from "@/components/Progressbar";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Home = () => {
   const listtile = [1, 2, 3, 4, 5, 6];
   return (
     <ImageBackground
-      source={require("D:\\Exploration\\greenguard\\assets\\images\\nativebackground.jpg")}
+      source={require("D:\\Exploration\\greenguard-expo\\assets\\images\\nativebackground.jpg")}
       style={{
         width: "100%",
         height: "100%",
@@ -16,7 +16,7 @@ const Home = () => {
       <View style={styles.container}>
         <View style={styles.topdiv}>
           <Image
-            source={require("D:\\Exploration\\greenguard\\assets\\images\\63.jpg")}
+            source={require("D:\\Exploration\\greenguard-expo\\assets\\images\\63.jpg")}
             style={styles.image}
           />
           <Text style={styles.username}>U S E R N A M E</Text>
@@ -75,8 +75,8 @@ const Home = () => {
               <Image
                 source={require("@/assets/images/63.jpg")}
                 style={{
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   borderRadius: 10,
                   borderWidth: 2,
                   borderColor: "#395B64",
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     },
   },
   topdiv: {
-    width: 370,
+    width: 340,
     height: "42.5%",
     backgroundColor: "#E7F6F2",
     borderRadius: 20,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     borderColor: "#395B64",
   },
   ContributionsDiv: {
-    width: 370,
+    width: 340,
     height: "55%",
     backgroundColor: "#E7F6F2",
     borderRadius: 20,
@@ -140,8 +140,8 @@ const styles = StyleSheet.create({
     borderColor: "#395B64",
   },
   topContributionsDiv: {
-    height: 40,
-    width: "95%",
+    height: 35,
+    width: "100%",
     borderWidth: 2,
     borderRadius: 10,
     flexDirection: "row",
